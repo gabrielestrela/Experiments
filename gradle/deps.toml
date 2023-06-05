@@ -1,0 +1,103 @@
+[versions]
+### Basic Setup
+namespace = "com.star.experiments"
+applicationId = "com.star.experiments"
+testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+compileSdk = "33"
+minSdk = "29"
+targetSdk = "33"
+versionCode = "1"
+versionName = "1.0"
+
+useCompose = "true"
+useViewBinding = "true"
+
+isMinifyEnabled = "false"
+defaultProguardFile = "proguard-android-optimize.txt"
+proguardFile = "proguard-rules.pro"
+
+jvmTarget = "11"
+### Basic Setup
+
+### Android
+coreKtxVersion = "1.9.0"
+appCompatVersion = "1.6.1"
+constraintLayoutVersion = "2.1.4"
+composeKotlinCompilerExtensionVersion = "1.4.7"
+composeRuntimeVersion = "1.4.3"
+composeBomVersion = "2023.04.01"
+### Android
+
+### Google
+materialVersion = "1.8.0"
+### Google
+
+### 3rd Party
+retrofitVersion = "2.9.0"
+koinVersion = "3.4.1"
+koinCompose = "3.4.5"
+moshiVersion = "1.14.0"
+### 3rd Party
+
+### Test
+junitVersion = "4.13.2"
+androidJunitVersion = "1.1.5"
+espressoVersion = "3.5.1"
+mockkVersion = "1.13.5"
+### Test
+
+### Plugins
+agpVersion = "8.2.0-alpha03"
+androidLibraryVersion = "8.1"
+kotlinVersion = "1.8.21"
+kspVersion = "1.8.21-1.0.11"
+hiltVersion = "2.44"
+### Plugins
+
+[libraries]
+
+### Android
+coreKtx = { module = "androidx.core:core-ktx", version.ref = "coreKtxVersion" }
+appCompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompatVersion" }
+constraintLayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintLayoutVersion" }
+composeRuntime = { module = "androidx.compose.runtime:runtime", version.ref = "composeRuntimeVersion" }
+composeBom = { module = "androidx.compose:compose-bom", version.ref = "composeBomVersion" }
+material3 = { module = "androidx.compose.material3:material3" }
+composeFoundation = { module = "androidx.compose.foundation:foundation" }
+composeUi = { module = "androidx.compose.ui:ui" }
+composeToolingPreview = { module = "androidx.compose.ui:ui-tooling-preview" }
+composeUiTooling = { module =  "androidx.compose.ui:ui-tooling" }
+### Android
+
+### Google
+material = { module = "com.google.android.material:material", version.ref = "materialVersion" }
+hilt = { module = "com.google.dagger:hilt-android", version.ref = "hiltVersion" }
+hiltCompiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltVersion" }
+### Google
+
+### 3rd Party
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
+koinCore = { module = "io.insert-koin:koin-core", version.ref = "koinVersion" }
+koinAndroid = { module = "io.insert-koin:koin-android", version.ref = "koinVersion" }
+koinCompose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCompose" }
+koinComposeNavigation = { module = "io.insert-koin:koin-androidx-compose-navigation", version.ref = "koinCompose" }
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshiVersion" }
+moshiCodeGen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshiVersion" }
+### 3rd Party
+
+### Test
+junit = { module = "junit:junit", version.ref = "junitVersion" }
+androidJunit = { module = "androidx.test.ext:junit", version.ref = "androidJunitVersion" }
+espressoCore = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoVersion" }
+composeUiJunit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+composeUiTestManifest = { module = "androidx.compose.ui:ui-test-manifest" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockkVersion" }
+### Test
+
+[plugins]
+
+agp = { id = "com.android.application", version.ref = "agpVersion" }
+androidLibrary = { id = "com.android.library", version.ref = "agpVersion" }
+kotlinPlugin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+hiltPlugin = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
