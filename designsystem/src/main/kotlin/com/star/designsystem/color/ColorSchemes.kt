@@ -10,10 +10,12 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
+// TODO (needs definition)
 internal val lightColorScheme = lightColorScheme(
 
 )
 
+// TODO (needs definition)
 internal val darkColorScheme = darkColorScheme(
 
 )
