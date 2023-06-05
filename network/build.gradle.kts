@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = deps.versions.namespace.get()
+    namespace = deps.versions.namespace.get() + ".network"
     compileSdk = deps.versions.compileSdk.get().toInt()
 
     defaultConfig {
@@ -49,9 +49,12 @@ dependencies {
 //    implementation(deps.koinAndroid)
 
     implementation(deps.retrofit)
+    implementation(deps.retrofitMoshiConverter)
 
     testImplementation(deps.junit)
     androidTestImplementation(deps.androidJunit)
 
     testImplementation(deps.mockk)
+
+    implementation(project(":corekotlin"))
 }

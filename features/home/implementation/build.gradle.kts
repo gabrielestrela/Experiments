@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = deps.versions.namespace.get()
+    namespace = deps.versions.namespace.get() + ".home.impl"
     compileSdk = deps.versions.compileSdk.get().toInt()
 
     defaultConfig {

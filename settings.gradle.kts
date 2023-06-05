@@ -22,6 +22,7 @@ dependencyResolutionManagement {
 rootProject.name = "Experiments"
 include(
     ":app",
+    ":corekotlin",
     ":network",
     ":designsystem",
     ":features:home:implementation",
