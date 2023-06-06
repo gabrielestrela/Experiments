@@ -11,7 +11,7 @@ class AuthInterceptor(private val secret: String) : Interceptor {
         val url = currentRequest
             .url()
             .newBuilder()
-            .addQueryParameter("APPID", secret)
+            .addQueryParameter("appid", secret)
             .build()
 
         val newRequest = currentRequest.newBuilder().url(url).build()

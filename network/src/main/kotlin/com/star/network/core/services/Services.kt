@@ -1,6 +1,7 @@
 package com.star.network.core.services
 
 import com.star.corekotlin.primitives.string.extension.empty
+import com.star.experiments.network.BuildConfig
 
 object Services {
     val weatherService = object : Service {
@@ -9,13 +10,11 @@ object Services {
         override val interceptorName: String
             get() = "weatherInterceptor"
 
-        // TODO setup secret via build config field
         override val secret: String
-            get() = String.empty()
+            get() = BuildConfig.WAPIS
 
-        // TODO setup base url via build config field
         override val baseUrl: String
-            get() = String.empty()
+            get() = "https://api.openweathermap.org/data/3.0/onecall"
 
     }
 

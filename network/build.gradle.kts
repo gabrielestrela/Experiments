@@ -9,11 +9,16 @@ android {
     namespace = deps.versions.namespace.get() + ".network"
     compileSdk = deps.versions.compileSdk.get().toInt()
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
         minSdk = deps.versions.minSdk.get().toInt()
         targetSdk = deps.versions.targetSdk.get().toInt()
 
         testInstrumentationRunner = deps.versions.testInstrumentationRunner.get()
+        buildConfigField("String", "WAPIS", "${System.getenv().get("WEATHER_API")}")
     }
 
     buildTypes {
