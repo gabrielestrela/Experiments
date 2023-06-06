@@ -1,7 +1,7 @@
 ### Adicionar ao arquivo ~/.zshrc ou ~/.bashrc
 
-´´´shell
+```shell
 
    export WEATHER_API="{token}"
 
-´´´
+```
