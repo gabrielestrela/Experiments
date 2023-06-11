@@ -77,4 +77,6 @@ dependencies {
     androidTestImplementation(deps.androidJunit)
 
     testImplementation(deps.mockk)
+
+    implementation(project(":designsystem"))
 }
