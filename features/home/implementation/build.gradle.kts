@@ -67,6 +67,7 @@ dependencies {
 
     implementation(deps.composeFoundation)
     implementation(deps.composeUi)
+    implementation(deps.material3)
     implementation(deps.composeToolingPreview)
     debugImplementation(deps.composeUiTooling)
 

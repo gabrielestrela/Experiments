@@ -9,7 +9,7 @@ import com.star.designsystem.typography.experimentsTypography
 @Composable
 fun ExperimentTheme(content: @Composable () -> Unit) {
     MaterialTheme(
-        colorScheme = themeColorScheme(),
+        colorScheme = themeColorScheme(supportDynamicColor = false),
         typography = experimentsTypography,
         shapes = experimentsShapes,
         content = content
