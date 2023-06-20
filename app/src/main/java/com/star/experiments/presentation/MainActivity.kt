@@ -19,5 +19,11 @@ class MainActivity : AppCompatActivity() {
 @Composable
 fun ExperimentApp() {
     ExperimentTheme {
+
     }
+}
+
+@Composable
+fun NavigationApp() {
+
 }

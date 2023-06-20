@@ -26,6 +26,7 @@ constraintLayoutVersion = "2.1.4"
 composeKotlinCompilerExtensionVersion = "1.4.7"
 composeRuntimeVersion = "1.4.3"
 composeBomVersion = "2023.04.01"
+composeNavigationVersion = "2.5.3"
 ### Android
 
 ### Google
@@ -67,6 +68,7 @@ composeFoundation = { module = "androidx.compose.foundation:foundation" }
 composeUi = { module = "androidx.compose.ui:ui" }
 composeToolingPreview = { module = "androidx.compose.ui:ui-tooling-preview" }
 composeUiTooling = { module =  "androidx.compose.ui:ui-tooling" }
+composeNavigation = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigationVersion" }
 ### Android
 
 ### Google

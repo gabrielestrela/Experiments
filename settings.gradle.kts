@@ -25,6 +25,7 @@ include(
     ":corekotlin",
     ":network",
     ":designsystem",
+    ":navigation",
     ":features:home:implementation",
     ":features:home:public"
 )

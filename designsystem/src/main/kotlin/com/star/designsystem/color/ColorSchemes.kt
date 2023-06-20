@@ -12,12 +12,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 internal val lightColorScheme = lightColorScheme(
-    primary = Color(0xFF5DBB63),
+    primary = Color(0xFF000000),
     inversePrimary = Color(0xFF4BAC56),
     secondary = Color(0xFF8EDC8C),
     background = Color(0xFFFFFFFF),
-    surface = Color(0xFF424242),
-    surfaceVariant = Color(0xFFE0E0E0),
+    surface = Color(0xFFFFFFFF),
+    surfaceVariant = Color(0xFFFFFFFF),
     onPrimary = Color(0xFF000000),
     onSecondary = Color(0xFF000000),
     onBackground = Color(0xFF000000),
@@ -28,12 +28,12 @@ internal val darkColorScheme = darkColorScheme(
     primary = Color(0xFF5DBB63),
     inversePrimary = Color(0xFF4BAC56),
     secondary = Color(0xFF8EDC8C),
-    background = Color(0xFF121212),
+    background = Color(0xFF1B1D1f),
     surface = Color(0xFF424242),
-    onPrimary = Color(0xFFFFFFFF),
-    onSecondary = Color(0xFFFFFFFF),
-    onBackground = Color(0xFFFFFFFF),
-    onSurface = Color(0xFFFFFFFF),
+    onPrimary = Color(0xFFF3F3F3),
+    onSecondary = Color(0xFFF3F3F3),
+    onBackground = Color(0xFFF3F3F3),
+    onSurface = Color(0xFFF3F3F3),
 )
 
 @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.S)
@@ -52,3 +52,6 @@ internal fun themeColorScheme(supportDynamicColor: Boolean = false) = if (suppor
 
 @Composable
 private fun getColorScheme() = if (isSystemInDarkTheme()) darkColorScheme else lightColorScheme
+
+@Composable
+fun getColorScheme(isDarkTheme: Boolean) = if (isDarkTheme) darkColorScheme else lightColorScheme

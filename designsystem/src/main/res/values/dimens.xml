@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--    <dimen name="size2">2dp</dimen>-->
+<!--    <dimen name="size4">2dp</dimen>-->
+<!--    <dimen name="size8">8dp</dimen>-->
+<!--    <dimen name="size16">16dp</dimen>-->
+<!--    <dimen name="size24">24dp</dimen>-->
+<!--    <dimen name="size32">32dp</dimen>-->
+<!--    <dimen name="size64">64dp</dimen>-->
+<!--    <dimen name="size72">72dp</dimen>-->
 
-    <dimen name="size2">2dp</dimen>
-    <dimen name="size4">2dp</dimen>
-    <dimen name="size8">8dp</dimen>
-    <dimen name="size16">16dp</dimen>
-    <dimen name="size24">24dp</dimen>
-    <dimen name="size32">32dp</dimen>
-    <dimen name="size64">64dp</dimen>
-
+<!--    <dimen name="font16">16sp</dimen>-->
+<!--    <dimen name="font20">20sp</dimen>-->
+<!--    <dimen name="font22">22sp</dimen>-->
+<!--    <dimen name="font24">24sp</dimen>-->
+<!--    <dimen name="font48">48sp</dimen>-->
 </resources>

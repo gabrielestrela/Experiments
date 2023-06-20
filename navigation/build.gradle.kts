@@ -1,20 +1,17 @@
 plugins {
-    alias(deps.plugins.agp)
+    alias(deps.plugins.androidLibrary)
     alias(deps.plugins.kotlinPlugin)
     alias(deps.plugins.ksp)
 //    alias(deps.plugins.hiltPlugin)
 }
 
 android {
-    namespace = deps.versions.namespace.get()
+    namespace = deps.versions.namespace.get() + ".designsystem"
     compileSdk = deps.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = deps.versions.applicationId.get()
         minSdk = deps.versions.minSdk.get().toInt()
         targetSdk = deps.versions.targetSdk.get().toInt()
-        versionCode = deps.versions.versionCode.get().toInt()
-        versionName = deps.versions.versionName.get()
 
         testInstrumentationRunner = deps.versions.testInstrumentationRunner.get()
     }
@@ -38,7 +35,6 @@ android {
 
     buildFeatures {
         compose = deps.versions.useCompose.get().toBoolean()
-        viewBinding = deps.versions.useViewBinding.get().toBoolean()
     }
 
     composeOptions {
@@ -54,24 +50,13 @@ android {
     }
 }
 
-kotlin {
-    jvmToolchain(jdkVersion = 11)
-}
-
 dependencies {
-
     implementation(deps.coreKtx)
-    implementation(deps.appCompat)
     implementation(deps.material)
-    implementation(deps.constraintLayout)
-
-    implementation(deps.moshi)
-    ksp(deps.moshiCodeGen)
+    implementation(deps.material3)
 
     implementation(deps.koinCore)
 //    implementation(deps.koinAndroid)
-    implementation(deps.koinCompose)
-    implementation(deps.koinComposeNavigation)
 
     implementation(deps.composeRuntime)
 
@@ -83,20 +68,13 @@ dependencies {
     implementation(deps.composeUi)
     implementation(deps.composeToolingPreview)
     debugImplementation(deps.composeUiTooling)
-    implementation(deps.composeNavigation)
+    debugImplementation(deps.composeNavigation)
 
     androidTestImplementation(deps.composeUiJunit4)
     debugImplementation(deps.composeUiTestManifest)
 
     testImplementation(deps.junit)
     androidTestImplementation(deps.androidJunit)
-    androidTestImplementation(deps.espressoCore)
 
     testImplementation(deps.mockk)
-
-    implementation(project(":network"))
-    implementation(project(":designsystem"))
-    implementation(project(":corekotlin"))
-    implementation(project(":navigation"))
-    implementation(project(":features:home:implementation"))
 }

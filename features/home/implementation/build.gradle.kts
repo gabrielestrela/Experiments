@@ -69,6 +69,7 @@ dependencies {
     implementation(deps.composeUi)
     implementation(deps.material3)
     implementation(deps.composeToolingPreview)
+    implementation(deps.composeNavigation)
     debugImplementation(deps.composeUiTooling)
 
     androidTestImplementation(deps.composeUiJunit4)
@@ -80,4 +81,5 @@ dependencies {
     testImplementation(deps.mockk)
 
     implementation(project(":designsystem"))
+    implementation(project(":navigation"))
 }
