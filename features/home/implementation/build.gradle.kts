@@ -82,4 +82,5 @@ dependencies {
 
     implementation(project(":designsystem"))
     implementation(project(":navigation"))
+    implementation(project(":corekotlin"))
 }

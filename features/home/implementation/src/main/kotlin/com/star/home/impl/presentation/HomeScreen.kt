@@ -42,6 +42,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.star.designsystem.color.getColorScheme
 import com.star.designsystem.dimensions.font64
 import com.star.designsystem.dimensions.size120
@@ -56,10 +57,11 @@ import com.star.designsystem.extensions.asPainter
 import com.star.designsystem.theme.ExperimentTheme
 import com.star.experiments.designsystem.R.drawable.*
 import com.star.home.impl.domain.model.Period
+import com.star.home.impl.presentation.viewmodel.HomeViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen() {
+fun HomeScreen(viewModel: HomeViewModel = viewModel()) {
     Surface() {
         Scaffold(
             bottomBar = { MapsSection() }
@@ -72,7 +74,7 @@ fun HomeScreen() {
                 item { TopHeader() }
                 item { TemperatureSection() }
                 item { EnvironmentSection() }
-                item { TabsSection() }
+                item { ForecastSection() }
 //            item { MapsSection() }
             }
         }
@@ -93,7 +95,7 @@ fun MapsSection() {
 }
 
 @Composable
-fun TabsSection() {
+fun ForecastSection() {
     Column {
         Row(Modifier.padding(top = size24)) {
             CustomTab(isSelected = true) { Period.TODAY.description }
