@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="location_success_but_null">Location callback is success, but null</string>
+    <string name="location_failure_report">Exception: %1$s</string>
+    <string name="location_failure_cancelled">Location callback was cancelled</string>
+
+</resources>

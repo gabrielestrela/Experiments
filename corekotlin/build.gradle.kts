@@ -13,6 +13,7 @@ task("testUnitTest") {
 
 dependencies {
     implementation(deps.koinCore)
+    implementation(deps.coroutines)
 //    implementation(deps.koinAndroid)
 
     testImplementation(deps.junit)

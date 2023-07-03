@@ -23,6 +23,7 @@ rootProject.name = "Experiments"
 include(
     ":app",
     ":corekotlin",
+    ":coreandroid",
     ":network",
     ":designsystem",
     ":navigation",
