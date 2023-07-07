@@ -5,7 +5,6 @@ echo "
 |  Running detekt...
 ===============
 "
-
 ./gradlew --no-daemon --stacktrace -PdisablePreDex detekt
 
 detektStatus=$?
@@ -13,12 +12,29 @@ detektStatus=$?
 # return 1 exit code if running checks fails
 [ $detektStatus -ne 0 ] && exit 1
 
+
+echo "
+===================
+|  Mapping kotlin changed files...
+===================
+"
+CHANGED_FILES="$(git --no-pager diff --name-status --no-color --cached | awk '$1 != "D" && $2 ~ /\.kts|\.kt/ { print $2}')"
+
+if [ -z "$CHANGED_FILES" ]; then
+    echo "No Kotlin staged files."
+    exit 0
+else
+  echo "Changed files:"
+  echo "$CHANGED_FILES"
+fi;
+
 echo "
 ===================
 |  Formatting code with ktlintFormat...
 ===================
 "
-./gradlew ktlintFormat
+
+./gradlew --quiet ktlintFormat -PinternalKtlintGitFilter="$CHANGED_FILES"
 
 echo "
 ===================
