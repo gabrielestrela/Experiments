@@ -63,6 +63,7 @@ dependencies {
     implementation(deps.coreKtx)
     implementation(deps.appCompat)
     implementation(deps.material)
+    implementation(deps.material3)
     implementation(deps.constraintLayout)
 
     implementation(deps.moshi)
