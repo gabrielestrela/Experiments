@@ -5,13 +5,29 @@ echo "
 |  Running detekt...
 ===============
 "
-./gradlew --no-daemon --stacktrace -PdisablePreDex detekt
 
-detektStatus=$?
+echo "Running detekt check..."
+fileArray=($@)
+detektInput=$(IFS=,;printf  "%s" "${fileArray[*]}")
+echo "Input files: $detektInput"
+
+./gradlew --no-daemon --stacktrace -PdisablePreDex detekt --input "$detektInput" 2>&1
+
+#detektStatus=$?
 
 # return 1 exit code if running checks fails
-[ $detektStatus -ne 0 ] && exit 1
+#[ $detektStatus -ne 0 ] && exit 1
 
+#OUTPUT=$(detekt --input "$detektInput" 2>&1)
+EXIT_CODE=$?
+if [ $EXIT_CODE -ne 0 ]; then
+  echo $OUTPUT
+  echo "***********************************************"
+  echo "                 detekt failed                 "
+  echo " Please fix the above issues before committing "
+  echo "***********************************************"
+  exit $EXIT_CODE
+fi
 
 echo "
 ===================
