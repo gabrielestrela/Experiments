@@ -124,7 +124,7 @@ fun PreviewCustomTabItem() {
     ExperimentTheme {
         Row() {
             CustomTab(isSelected = true) { "Today" }
-                Spacer(Modifier.padding(end = size8))
+            Spacer(Modifier.padding(end = size8))
             CustomTab { "Tomorrow" }
         }
     }

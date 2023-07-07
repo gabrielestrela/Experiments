@@ -41,7 +41,7 @@ echo "
 ===================
 "
 
-./gradlew --no-daemon --stacktrace -PdisablePreDex ktlintCheck
+./gradlew --no-daemon --stacktrace -PdisablePreDex ktlintCheck -PinternalKtlintGitFilter="$CHANGED_FILES"
 
 checkStyleStatus=$?
 
