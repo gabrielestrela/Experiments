@@ -56,6 +56,10 @@ dependencies {
     implementation(deps.retrofit)
     implementation(deps.retrofitMoshiConverter)
 
+    debugImplementation(deps.flipper)
+    debugImplementation(deps.flipperNetworkPlugin)
+    releaseImplementation(deps.flipperNoop)
+
     testImplementation(deps.junit)
     androidTestImplementation(deps.androidJunit)
 

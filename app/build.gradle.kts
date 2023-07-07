@@ -89,6 +89,11 @@ dependencies {
     androidTestImplementation(deps.composeUiJunit4)
     debugImplementation(deps.composeUiTestManifest)
 
+    debugImplementation(deps.flipper)
+    debugImplementation(deps.soLoader)
+    debugImplementation(deps.flipperNetworkPlugin)
+    releaseImplementation(deps.flipperNoop)
+
     testImplementation(deps.junit)
     androidTestImplementation(deps.androidJunit)
     androidTestImplementation(deps.espressoCore)

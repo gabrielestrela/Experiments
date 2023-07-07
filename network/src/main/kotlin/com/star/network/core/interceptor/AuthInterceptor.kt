@@ -9,7 +9,7 @@ class AuthInterceptor(private val secret: String) : Interceptor {
 
         // TODO (change what is necessary if any)
         val url = currentRequest
-            .url()
+            .url
             .newBuilder()
             .addQueryParameter("appid", secret)
             .build()
