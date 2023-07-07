@@ -20,19 +20,22 @@ class CustomApp : Application() {
     override fun onCreate() {
         super.onCreate()
         configureApp {
+            startKoin()
             context = applicationContext
-            startKoin {
-                androidContext(applicationContext)
-                modules(
-                    preferencesDeps,
-                    networkDeps
-                )
-            }
-
             configureFlipper = {
                 app = this@CustomApp
                 pluginsProducer = { flipperPluginsProducer() }
             }
+        }
+    }
+
+    private fun Application.startKoin() {
+        startKoin {
+            androidContext(applicationContext)
+            modules(
+                preferencesDeps,
+                networkDeps
+            )
         }
     }
 

@@ -1,10 +1,13 @@
 package com.star.experiments.application.dsl
 
 import android.app.Application
+import android.content.Context
 import com.facebook.flipper.android.AndroidFlipperClient
 import com.facebook.flipper.android.utils.FlipperUtils
 import com.facebook.soloader.SoLoader
 import com.star.coreandroid.utils.runIfDebug
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
 inline fun Application.configureApp(crossinline initBlock: AppConfigurationDsl.() -> Unit) {
     val dsl = AppConfigurationDsl()
