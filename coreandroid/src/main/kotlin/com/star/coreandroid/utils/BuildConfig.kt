@@ -1,7 +1,12 @@
 package com.star.coreandroid.utils
 
-import org.koin.android.BuildConfig
+import android.content.Context
+import android.content.pm.ApplicationInfo
 
-inline fun runIfDebug(block: () -> Unit) {
-    if (BuildConfig.DEBUG) block()
+
+private fun Context.isDebug() =
+    (this.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE != 0)
+
+fun Context.runIfDebug(block: () -> Unit) {
+    if (this.isDebug()) block()
 }

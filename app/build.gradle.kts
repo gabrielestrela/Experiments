@@ -27,6 +27,10 @@ android {
                 deps.versions.proguardFile.get()
             )
         }
+        debug {
+            isMinifyEnabled = false
+            isDebuggable = true
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

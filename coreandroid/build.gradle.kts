@@ -24,6 +24,9 @@ android {
                 deps.versions.proguardFile.get()
             )
         }
+        debug {
+
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
