@@ -58,6 +58,8 @@ kotlinVersion = "1.8.21"
 kspVersion = "1.8.21-1.0.11"
 hiltVersion = "2.44"
 foojayResolverConvertionVersion = "0.5.0"
+ktlintVersion = "11.5.0"
+detektVersion = "1.23.0"
 ### Plugins
 
 [libraries]
@@ -115,3 +117,5 @@ kotlinPlugin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersi
 ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
 hiltPlugin = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
 foojayResolverConvertion = { id = "org.gradle.toolchains.foojay-resolver-convention", version.ref = "foojayResolverConvertionVersion" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlintVersion" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detektVersion" }

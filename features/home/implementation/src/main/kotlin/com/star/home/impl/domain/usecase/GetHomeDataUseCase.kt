@@ -1,9 +1,7 @@
 package com.star.home.impl.domain.usecase
 
-class GetHomeDataUseCase(
-
-) {
+class GetHomeDataUseCase{
     suspend operator fun invoke() {
-
+        // Do Nothing
     }
 }

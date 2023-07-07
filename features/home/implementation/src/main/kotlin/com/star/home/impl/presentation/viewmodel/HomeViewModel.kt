@@ -22,8 +22,10 @@ class HomeViewModel : ViewModel() {
     }
 
     private fun handleForecastTabClick() {
+        // Do Nothing
     }
 
     private fun handleTopHeaderMenuClick() {
+        // Do Nothing
     }
 }

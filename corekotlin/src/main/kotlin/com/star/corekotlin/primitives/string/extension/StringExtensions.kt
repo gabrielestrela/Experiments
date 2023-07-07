@@ -1,3 +1,4 @@
 package com.star.corekotlin.primitives.string.extension
 
-fun String.Companion.empty(): String = ""
+private const val EMPTY_STRING = ""
+fun String.Companion.empty(): String = EMPTY_STRING
