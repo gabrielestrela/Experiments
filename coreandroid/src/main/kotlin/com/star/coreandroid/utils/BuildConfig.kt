@@ -8,5 +8,5 @@ private fun Context.isDebug() =
     (this.applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE != 0)
 
 fun Context.runIfDebug(block: () -> Unit) {
-    if (this.isDebug()) block()
+        if (this.isDebug()) block()
 }
