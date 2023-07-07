@@ -25,7 +25,7 @@ import com.star.experiments.designsystem.R
 @Composable
 fun EnvironmentSection() {
     Card(
-            elevation = CardDefaults.cardElevation(defaultElevation = size4),
+        elevation = CardDefaults.cardElevation(defaultElevation = size4),
         modifier = Modifier
             .fillMaxWidth()
 //            .height(IntrinsicSize.Max)
