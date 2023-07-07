@@ -13,7 +13,6 @@ inline fun Application.configureApp(crossinline initBlock: AppConfigurationDsl.(
     with(dsl) {
         configureFlipper?.let { configureFlipper(it) }
     }
-
 }
 
 fun configureFlipper(flipperConfig: FlipperConfigurationDsl.() -> Unit) {

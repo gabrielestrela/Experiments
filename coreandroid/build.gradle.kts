@@ -25,7 +25,6 @@ android {
             )
         }
         debug {
-
         }
     }
     compileOptions {

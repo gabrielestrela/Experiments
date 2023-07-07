@@ -33,7 +33,6 @@ class CustomApp : Application() {
                 app = this@CustomApp
                 pluginsProducer = { flipperPluginsProducer() }
             }
-
         }
     }
 
