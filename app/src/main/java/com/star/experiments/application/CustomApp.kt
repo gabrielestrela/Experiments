@@ -51,6 +51,6 @@ class CustomApp : Application() {
         get() = listOf(
             networkDeps,
             dispatcherProviderDeps,
-            preferencesDeps,
+            preferencesDeps
         )
 }
