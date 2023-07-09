@@ -20,6 +20,7 @@ import com.star.home.impl.presentation.viewstate.TopHeader
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.consumeAsFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -60,7 +61,7 @@ class HomeViewModel(
                     _state.update { updateStateWithData(data) }
                 }.handleErrors { throwable ->
                     _state.update { _state.value.copy(isError = true) }
-                }
+                }.collect()
         }
     }
 

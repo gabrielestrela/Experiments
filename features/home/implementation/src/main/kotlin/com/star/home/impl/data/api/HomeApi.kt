@@ -3,11 +3,12 @@ package com.star.home.impl.data.api
 import com.star.home.impl.data.model.HomeParts
 import com.star.home.impl.data.model.response.HomeResponse
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Query
 
 interface HomeApi {
-    @GET("")
-    fun getHomeData(
+    @GET("onecall")
+    suspend fun getHomeData(
         @Query(LAT) lat: String,
         @Query(LON) lon: String,
         @Query(EXCLUDES) excludes: String = getExcludes(),
