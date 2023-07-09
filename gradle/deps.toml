@@ -42,6 +42,8 @@ retrofitVersion = "2.9.0"
 koinVersion = "3.4.1"
 koinCompose = "3.4.5"
 moshiVersion = "1.14.0"
+flipperVersion = "0.201.0"
+soLoaderVersion = "0.10.5"
 ### 3rd Party
 
 ### Test
@@ -98,6 +100,10 @@ koinCompose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "
 koinComposeNavigation = { module = "io.insert-koin:koin-androidx-compose-navigation", version.ref = "koinCompose" }
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshiVersion" }
 moshiCodeGen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshiVersion" }
+flipper = { module = "com.facebook.flipper:flipper", version.ref = "flipperVersion" }
+soLoader = { module = "com.facebook.soloader:soloader", version.ref = "soLoaderVersion" }
+flipperNoop = { module = "com.facebook.flipper:flipper-noop", version.ref = "flipperVersion" }
+flipperNetworkPlugin = { module = "com.facebook.flipper:flipper-network-plugin", version.ref = "flipperVersion" }
 ### 3rd Party
 
 ### Test

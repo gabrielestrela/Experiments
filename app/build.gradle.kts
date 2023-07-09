@@ -27,6 +27,10 @@ android {
                 deps.versions.proguardFile.get()
             )
         }
+        debug {
+            isMinifyEnabled = false
+            isDebuggable = true
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -88,6 +92,11 @@ dependencies {
 
     androidTestImplementation(deps.composeUiJunit4)
     debugImplementation(deps.composeUiTestManifest)
+
+    debugImplementation(deps.flipper)
+    debugImplementation(deps.soLoader)
+    debugImplementation(deps.flipperNetworkPlugin)
+    releaseImplementation(deps.flipperNoop)
 
     testImplementation(deps.junit)
     androidTestImplementation(deps.androidJunit)
