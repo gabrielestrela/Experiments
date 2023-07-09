@@ -18,7 +18,12 @@ android {
         targetSdk = deps.versions.targetSdk.get().toInt()
 
         testInstrumentationRunner = deps.versions.testInstrumentationRunner.get()
-        buildConfigField("String", "WAPIS", "${System.getenv().get("WEATHER_API")}")
+//        buildConfigField("String", "WAPIS", System.getenv("WEATHER_API"))
+        buildConfigField(
+            type = "String",
+            name = "WAPIS",
+            value = "\"${providers.environmentVariable("WEATHER_API").get()}\""
+        )
     }
 
     buildTypes {
@@ -55,6 +60,7 @@ dependencies {
 
     implementation(deps.retrofit)
     implementation(deps.retrofitMoshiConverter)
+    implementation(deps.moshiKotlin)
 
     testImplementation(deps.junit)
     androidTestImplementation(deps.androidJunit)

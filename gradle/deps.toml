@@ -97,6 +97,7 @@ koinAndroid = { module = "io.insert-koin:koin-android", version.ref = "koinVersi
 koinCompose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCompose" }
 koinComposeNavigation = { module = "io.insert-koin:koin-androidx-compose-navigation", version.ref = "koinCompose" }
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshiVersion" }
+moshiKotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshiVersion" }
 moshiCodeGen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshiVersion" }
 ### 3rd Party
 
