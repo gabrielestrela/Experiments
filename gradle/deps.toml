@@ -54,7 +54,7 @@ mockkVersion = "1.13.5"
 ### Test
 
 ### Plugins
-agpVersion = "8.2.0-alpha10"
+agpVersion = "8.2.0-rc03"
 androidLibraryVersion = "8.1"
 kotlinVersion = "1.8.21"
 kspVersion = "1.8.21-1.0.11"
