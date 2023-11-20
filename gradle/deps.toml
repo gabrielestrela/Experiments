@@ -51,6 +51,11 @@ junitVersion = "4.13.2"
 androidJunitVersion = "1.1.5"
 espressoVersion = "3.5.1"
 mockkVersion = "1.13.5"
+jupiterVersion = "5.8.2"
+androidxArchCoreVersion= "2.1.0"
+kotlinxCoroutineTestVersion = "1.6.4"
+turbineVersion = "0.11.0"
+androidXExtVersion = "1.1.5"
 ### Test
 
 ### Plugins
@@ -99,6 +104,7 @@ koinAndroid = { module = "io.insert-koin:koin-android", version.ref = "koinVersi
 koinCompose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCompose" }
 koinComposeNavigation = { module = "io.insert-koin:koin-androidx-compose-navigation", version.ref = "koinCompose" }
 moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshiVersion" }
+moshiKotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshiVersion" }
 moshiCodeGen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshiVersion" }
 flipper = { module = "com.facebook.flipper:flipper", version.ref = "flipperVersion" }
 soLoader = { module = "com.facebook.soloader:soloader", version.ref = "soLoaderVersion" }
@@ -113,6 +119,11 @@ espressoCore = { module = "androidx.test.espresso:espresso-core", version.ref = 
 composeUiJunit4 = { module = "androidx.compose.ui:ui-test-junit4" }
 composeUiTestManifest = { module = "androidx.compose.ui:ui-test-manifest" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockkVersion" }
+jupiter = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jupiterVersion"}
+androidxArchCore = { module = "androidx.arch.core:core-testing", version.ref = "androidxArchCoreVersion" }
+kotlinxCoroutineTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutineTestVersion" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbineVersion" }
+androidXExt = { module = "androidx.test.ext:junit", version.ref = "androidXExtVersion" }
 ### Test
 
 [plugins]

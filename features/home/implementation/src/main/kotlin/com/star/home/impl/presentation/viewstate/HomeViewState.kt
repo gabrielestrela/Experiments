@@ -7,29 +7,30 @@ data class HomeViewState(
     val topHeader: TopHeader = TopHeader(),
     val temperatureSection: TemperatureSection = TemperatureSection(),
     val environmentSection: EnvironmentSection = EnvironmentSection(),
-    val forecastSection: ForecastSection = ForecastSection()
+    val forecastSection: ForecastSection = ForecastSection(),
+    val isError: Boolean = false,
 )
 
 data class TopHeader(
     val city: String = String.empty(),
-    val data: String = String.empty(),
+    val date: String = String.empty(),
 )
 
 data class TemperatureSection(
     val temperature: String = String.empty(),
-    val weatherType: String = String.empty(),
+    val weatherDescription: String = String.empty(),
     @DrawableRes val weatherTypeIcon: Int = 0,
 )
 
 data class EnvironmentSection(
     val wind: EnvironmentDetails = EnvironmentDetails(),
     val humidity: EnvironmentDetails = EnvironmentDetails(),
-    val rain: EnvironmentDetails = EnvironmentDetails()
+    val clouds: EnvironmentDetails = EnvironmentDetails()
 )
 
 data class EnvironmentDetails(
     @DrawableRes val iconRes: Int = 0,
-    val velocity: String = String.empty(),
+    val value: String = String.empty(),
     val label: String = String.empty()
 )
 

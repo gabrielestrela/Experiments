@@ -50,6 +50,14 @@ android {
     }
 }
 
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
+
+kotlin {
+    jvmToolchain(jdkVersion = 11)
+}
+
 dependencies {
     implementation(deps.coreKtx)
     implementation(deps.appCompat)
@@ -57,7 +65,7 @@ dependencies {
     implementation(deps.constraintLayout)
 
     implementation(deps.koinCore)
-//    implementation(deps.koinAndroid)
+    implementation(deps.koinAndroid)
 
     implementation(deps.composeRuntime)
 
@@ -72,6 +80,11 @@ dependencies {
     implementation(deps.composeNavigation)
     debugImplementation(deps.composeUiTooling)
 
+    implementation(deps.retrofit)
+
+    implementation(deps.moshi)
+    ksp(deps.moshiCodeGen)
+
     androidTestImplementation(deps.composeUiJunit4)
     debugImplementation(deps.composeUiTestManifest)
 
@@ -80,7 +93,15 @@ dependencies {
 
     testImplementation(deps.mockk)
 
+    testImplementation(deps.jupiter)
+    testImplementation(deps.androidxArchCore)
+    testImplementation(deps.kotlinxCoroutineTest)
+    testImplementation(kotlin("test"))
+    testImplementation(deps.turbine)
+    testImplementation(deps.androidXExt)
+
     implementation(project(":designsystem"))
     implementation(project(":navigation"))
     implementation(project(":corekotlin"))
+    implementation(project(":network"))
 }

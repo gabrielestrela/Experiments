@@ -1,6 +1,8 @@
 package com.star.network.di
 
 import com.facebook.flipper.plugins.network.NetworkFlipperPlugin
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import com.star.network.core.interceptor.AuthInterceptor
 import com.star.network.core.okhttpclient.getCustomClient
 import com.star.network.core.services.Services
@@ -8,6 +10,8 @@ import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+
+private fun createMoshi(): Moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 
 val networkDeps = module {
     single(named(Services.weatherService.interceptorName)) {
@@ -29,7 +33,7 @@ val networkDeps = module {
                     flipperPlugin = get()
                 )
             )
-            .addConverterFactory(MoshiConverterFactory.create())
+            .addConverterFactory(MoshiConverterFactory.create(createMoshi()))
             .build()
     }
 

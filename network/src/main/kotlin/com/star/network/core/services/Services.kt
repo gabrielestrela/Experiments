@@ -14,7 +14,7 @@ object Services {
             get() = BuildConfig.WAPIS
 
         override val baseUrl: String
-            get() = "https://api.openweathermap.org/data/3.0/onecall"
+            get() = "https://api.openweathermap.org/data/3.0/"
 
     }
 
