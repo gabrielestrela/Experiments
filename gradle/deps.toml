@@ -51,10 +51,15 @@ junitVersion = "4.13.2"
 androidJunitVersion = "1.1.5"
 espressoVersion = "3.5.1"
 mockkVersion = "1.13.5"
+jupiterVersion = "5.8.2"
+androidxArchCoreVersion= "2.1.0"
+kotlinxCoroutineTestVersion = "1.6.4"
+turbineVersion = "0.11.0"
+androidXExtVersion = "1.1.5"
 ### Test
 
 ### Plugins
-agpVersion = "8.2.0-alpha10"
+agpVersion = "8.2.0-rc03"
 androidLibraryVersion = "8.1"
 kotlinVersion = "1.8.21"
 kspVersion = "1.8.21-1.0.11"
@@ -114,6 +119,11 @@ espressoCore = { module = "androidx.test.espresso:espresso-core", version.ref = 
 composeUiJunit4 = { module = "androidx.compose.ui:ui-test-junit4" }
 composeUiTestManifest = { module = "androidx.compose.ui:ui-test-manifest" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockkVersion" }
+jupiter = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jupiterVersion"}
+androidxArchCore = { module = "androidx.arch.core:core-testing", version.ref = "androidxArchCoreVersion" }
+kotlinxCoroutineTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutineTestVersion" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbineVersion" }
+androidXExt = { module = "androidx.test.ext:junit", version.ref = "androidXExtVersion" }
 ### Test
 
 [plugins]

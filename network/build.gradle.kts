@@ -22,7 +22,8 @@ android {
         buildConfigField(
             type = "String",
             name = "WAPIS",
-            value = "\"${providers.environmentVariable("WEATHER_API").get()}\""
+            //value = "\"${providers.environmentVariable("WEATHER_API").get()}\""
+            value = "null"
         )
     }
 

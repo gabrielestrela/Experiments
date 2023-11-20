@@ -50,6 +50,10 @@ android {
     }
 }
 
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
+
 kotlin {
     jvmToolchain(jdkVersion = 11)
 }
@@ -88,6 +92,13 @@ dependencies {
     androidTestImplementation(deps.androidJunit)
 
     testImplementation(deps.mockk)
+
+    testImplementation(deps.jupiter)
+    testImplementation(deps.androidxArchCore)
+    testImplementation(deps.kotlinxCoroutineTest)
+    testImplementation(kotlin("test"))
+    testImplementation(deps.turbine)
+    testImplementation(deps.androidXExt)
 
     implementation(project(":designsystem"))
     implementation(project(":navigation"))
